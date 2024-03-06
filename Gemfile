@@ -18,7 +18,6 @@ gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
-gem 'wicked'
 
 group :development, :test do
   gem "dotenv-rails"
