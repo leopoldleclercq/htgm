@@ -5,10 +5,16 @@ class ProfilsController < ApplicationController
   end
 
   def edit
+    if @user.save
+      render 'recapitulation'
+    else
+      render 'new'
+    end
   end
 
   def update
   end
+
 
   private
 
