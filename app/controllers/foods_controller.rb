@@ -5,4 +5,3 @@ class FoodsController < ApplicationController
   def update
   end
 end
-d
