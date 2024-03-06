@@ -8,4 +8,18 @@
   <%= f.input :body_fat %>
   <%= f.input :weight %>
   <%= f.submit %>
+
+  <% if @user.persisted? %>
+    <h1>Vos informations</h1>
+
+    <p>Nom: <%= @user.last_name %></p>
+    <p>Prénom: <%= @user.first_name %></p>
+    <p>Sexe: <%= @user.sexe %></p>
+    <p>Size: <%= @user.size %></p>
+    <p>Goal: <%= @user.goal %></p>
+    <p>Training: <%= @user.training %></p>
+    <p>body_fat: <%= @user.body_fat %></p>
+    <p>weight: <%= @user.weight %></p>
+
+  <% end %>
 <% end %>
