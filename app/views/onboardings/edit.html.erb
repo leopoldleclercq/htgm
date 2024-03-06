@@ -1,11 +1,18 @@
-<%= simple_form_for @user, url: onboardings_path, method: :patch do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :sexe %>
-  <%= f.input :size %>
-  <%= f.input :goal %>
-  <%= f.input :training %>
-  <%= f.input :body_fat %>
-  <%= f.input :weight %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
+  </div>
+  <div class="row">
+    <%= simple_form_for @user, url: onboardings_path, method: :patch do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :sexe %>
+      <%= f.input :size %>
+      <%= f.input :goal %>
+      <%= f.input :training %>
+      <%= f.input :body_fat %>
+      <%= f.input :weight %>
+      <%= f.submit 'Valider', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
