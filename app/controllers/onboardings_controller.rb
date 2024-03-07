@@ -12,6 +12,6 @@ class OnboardingsController < ApplicationController
   private
 
   def onboarding_params
-    params.require(:user).permit(:first_name, :last_name, :sexe, :size, :weight, :goal, :training, :body_fat)
+    params.require(:user).permit(:first_name, :last_name, :sexe, :size, :weight, :goal, :training, :body_fat, :year)
   end
 end
