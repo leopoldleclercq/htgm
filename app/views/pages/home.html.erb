@@ -3,13 +3,16 @@
   <div class="logo-home">
     <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
   </div>
-
+  <div class="slogan">
+    <h1>Envie de devenir la meilleur version de toi même ?</h1>
+  </div>
   <div class="btn-home">
     <% if user_signed_in? %>
       <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
     <% else %>
-      <%= link_to "Se connecter", new_user_session_path, class:"connection"%>
-      <%= link_to "S'inscrire", new_user_registration_path, class:"inscription" %>
+      <%= link_to "Se connecter", new_user_session_path, class:"btn-white"%>
+      <%= link_to "S'inscrire", new_user_registration_path, class:"btn-white" %>
     <% end %>
   </div>
+
 </div>
