@@ -1,5 +1,38 @@
-<div class="container">
-  <div class="row justify-content-center">
-    
+<div class="exercices-page">
+  <div class="navbar-exercice">
+    <div class="back">
+      <%= link_to dashboards_path do %>
+        <%# utiliser font anwsome pour la fleche retour %>
+        <p>retour</p>
+      <% end %>
+    </div>
+    <div class="logo-exercices">
+      <%# trouver un logo pour les exercices %>
+      <p>logo exercice</p>
+    </div>
+  </div>
+  <div class="category">
+    <%# crée une seconde navbar pour les 3 categories %>
+  </div>
+  <div class="exercices_list">
+    <ul>
+      <% @exercices.each do |exercice| %>
+        <div class="exercice-card">
+          <%= link_to exercice_path(exercice) do %>
+          <li>
+            <div class="exercice-title">
+              <p><%= exercice.title %></p>
+            </div>
+            <div class="exercice-img">
+              <p><%= exercice.img %></p>
+            </div>
+            <div class="exercice-composition">
+              <p><%= exercice.composition %></p>
+            </div>
+          </li>
+          <% end %>
+        </div>
+      <% end %>
+    </ul>
   </div>
 </div>

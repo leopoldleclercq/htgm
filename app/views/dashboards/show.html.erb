@@ -1,15 +1,31 @@
-<div class="container">
-  <div class="navbar_dashboard_bot">
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" <%= link_to "exercice", exercices_path %>>
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-      </a>
-      <a class="navbar-brand" href="#">
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-      </a>
-      <a class="navbar-brand" href="#">
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-      </a>
+<div class="dashboard-page">
+
+  <div class="search">
+    
   </div>
-</nav>
+
+  <div class="dashboard-body">
+  </div>
+
+  <div class="navbar_dashboard_bot">
+    <nav class="navbar-dashboard">
+      <div class="exercices-dashboard">
+        <%= link_to exercices_path do %>
+          <%# mettre logo exercice %>
+          <p>exercices</p>
+        <% end %>
+      </div>
+      <div class="profil-dashboard">
+        <%= link_to profils_path do %>
+          <%# mettre logo profil %>
+          <p>profil</p>
+        <% end %>
+      </div>
+      <div class="meal-dashboard">
+        <%# mettre logo meal %>
+        <p>meal</p>
+      </div>
+    </nav>
+  </div>
+
 </div>

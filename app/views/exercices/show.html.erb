@@ -1,0 +1,15 @@
+<div class="exercice-page">
+  <div class="img-exercice">
+    <%# insérer l'image en background %>
+    <div class="back">
+      <%# utiliser font anwsome pour la fleche retour %>
+      <%= link_to exercices_path do %>
+        <p>retour</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="exercice-text">
+    <p><%= @exercice.title %></p>
+    <p><%= @exercice.description %></p>
+  </div>
+</div>
