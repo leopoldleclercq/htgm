@@ -1,0 +1,40 @@
+.sessions {
+  background-color: #1D3D57;
+  height: 100vh;
+}
+
+.log {
+  color: white;
+}
+
+.formulaire-connection {
+  padding: 10px;
+  .form-label {
+    color: white;
+  }
+  .form-check-label {
+    color: white;
+  }
+}
+
+.btn-connection {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px grey;
+  font-weight: bold;
+  margin: 20px;
+  width: 60%;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.connection {
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+}
