@@ -6,11 +6,12 @@ class OnboardingsController < ApplicationController
   def update
     @user = current_user
     @user.update(onboarding_params)
+    redirect_to dashboards_path
   end
 
   private
 
   def onboarding_params
-    params.require(:onboarding).permit(:first_name, :last_name, :sexe, :size, :weight, :goal, :training, :body_fat)
+    params.require(:user).permit(:first_name, :last_name, :sexe, :size, :weight, :goal, :training, :body_fat)
   end
 end

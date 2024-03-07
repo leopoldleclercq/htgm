@@ -1,12 +1,15 @@
-<%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
+<div class="home-page">
 
-<% if user_signed_in? %>
-  <%= link_to "Home", "#", class: "nav-link" %>
-  <%= link_to "Messages", "#", class: "nav-link" %>
-  <%= link_to "Action", "#", class: "dropdown-item" %>
-  <%= link_to "Another action", "#", class: "dropdown-item" %>
-  <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-<% else %>
-  <%= link_to "Se connecter", new_user_session_path %>
-  <%= link_to "S'inscrire", new_user_registration_path %>
-<% end %>
+  <div class="logo-home">
+    <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
+  </div>
+
+  <div class="btn-home">
+    <% if user_signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+    <% else %>
+      <%= link_to "Se connecter", new_user_session_path, class:"connection"%>
+      <%= link_to "S'inscrire", new_user_registration_path, class:"inscription" %>
+    <% end %>
+  </div>
+</div>
