@@ -322,7 +322,7 @@ Exercice.create(title: "Entraînement de natation", composition: "Nage libre, Br
 Exercice.create(title: "Yoga pour la force intérieure", composition: "Postures de guerrier, Chaturanga, Méditation", description: "Renforcez votre force intérieure avec cet entraînement de yoga. Les postures de guerrier, chaturanga et méditation favorisent l'équilibre entre le corps et l'esprit.", category: "full body", img: "")
 
 user1 = User.create!(
-  email: 'test@mail.com',
+  email: 'leo@mail.com',
   password: 'secret',
   first_name: "Leonardo",
   last_name: "DiCaprio",
