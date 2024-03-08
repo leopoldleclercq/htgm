@@ -1,0 +1,25 @@
+<div class="img-meal">
+  <div class="back">
+    <%= link_to dashboards_path do %>
+      <p>retour</p>
+    <% end %>
+  </div>
+  <div class="informations">
+    <div class="meal-title">
+      <h2><%= @meal.title %></h2>
+    </div>
+    <div class="meal-calorie">
+      <p><strong><%= @meal.calorie %></strong> cal</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="composition">
+    <h3>Composition</h3>
+    <p><%= @meal.composition %></p>
+  </div>
+  <div class="description">
+    <h3>Description</h3>
+    <p><%= @meal.description %></p>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <div class="dashboard-page">
 
   <div class="search">
-    
+
   </div>
 
   <div class="dashboard-body">
@@ -22,8 +22,12 @@
         <% end %>
       </div>
       <div class="meal-dashboard">
-        <%# mettre logo meal %>
-        <p>meal</p>
+        <% @daily_meals.each do |daily_meal| %>
+          <%= link_to daily_meal_path(daily_meal) do %>
+            <%# mettre logo meal %>
+            <p>meals of the day</p>
+          <% end %>
+        <% end %>
       </div>
     </nav>
   </div>
