@@ -1,34 +1,39 @@
-<div class="container">
-  <div class="row">
+<div class="container sessions">
+
+  <div class="row logo-home">
     <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
   </div>
-  <div class="row">
+
+  <div class="row formulaire-connection">
     <%= simple_form_for @user, url: onboardings_path, method: :patch do |f| %>
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :sexe %>
-      <%= f.input :size %>
-      <%= f.input :goal %>
-      <%= f.input :year %>
-      <%= f.input :training %>
-      <%= f.input :body_fat %>
-      <%= f.input :weight %>
-      <%= f.submit 'Valider', class: 'btn btn-primary' %>
+      <%= f.input :first_name, label: "Prénom", label_html: { class: "form-label" } %>
+      <%= f.input :last_name, label: "Nom", label_html: { class: "form-label" } %>
+      <%= f.input :sexe, label: "Sexe", label_html: { class: "form-label" } %>
+      <%= f.input :size, label: "Taille", label_html: { class: "form-label" } %>
+      <%= f.input :goal, label: "Objectif", label_html: { class: "form-label" } %>
+      <%= f.input :year, label: "Année de naissance", label_html: { class: "form-label" } %>
+      <%= f.input :training, label: "Entraînement", label_html: { class: "form-label" } %>
+      <%= f.input :body_fat, label: "Masse grasse", label_html: { class: "form-label" } %>
+      <%= f.input :weight, label: "Poids", label_html: { class: "form-label" } %>
+      <%= f.submit 'Valider', class: 'btn btn-connection btn-primary' %>
     <% end %>
   </div>
-  <div class="row">
-      <% if @user.persisted? %>
-        <h1>Vos informations</h1>
 
+  <div class="row">
+    <% if @user.persisted? %>
+      <div class="connection">
+        <h1>Vos informations</h1>
         <p>Nom: <%= @user.last_name %></p>
         <p>Prénom: <%= @user.first_name %></p>
         <p>Sexe: <%= @user.sexe %></p>
-        <p>Size: <%= @user.size %></p>
-        <p>Goal: <%= @user.goal %></p>
-        <p>year: <%= @user.year %></p>
-        <p>Training: <%= @user.training %></p>
-        <p>body_fat: <%= @user.body_fat %></p>
-        <p>weight: <%= @user.weight %></p>
-       <% end %>
+        <p>Taille: <%= @user.size %></p>
+        <p>Objectif: <%= @user.goal %></p>
+        <p>Année de naissance: <%= @user.year %></p>
+        <p>Entraînement: <%= @user.training %></p>
+        <p>Masse grasse: <%= @user.body_fat %></p>
+        <p>Poids: <%= @user.weight %></p>
+      </div>
+    <% end %>
   </div>
+
 </div>

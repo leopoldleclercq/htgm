@@ -10,7 +10,7 @@
 Meal.destroy_all
 Exercice.destroy_all
 
-Meal.create(
+meal1 = Meal.create(
   img: "https://www.unlockfood.ca/EatRightOntario/media/Website-images-resized/Recipe%20Images%20-resized/Vegetable-Quinoa-Salad-resized.jpg",
   title: "Salade de quinoa aux légumes frais",
   composition: "100g de quinoa cuit, 1 concombre, 1 poivron rouge, 1 tomate, 50g de feta, 1 cuillère à soupe d'huile d'olive, sel et poivre.",
@@ -18,7 +18,7 @@ Meal.create(
   calorie: 350
 )
 
-Meal.create(
+meal2 = Meal.create(
   img: "https://static.pourdebon.com/images/1200-630/57c1a6b52e8641cac054401f32890064/QUINOAPOULET.jpeg",
   title: "Poulet grillé aux herbes et quinoa",
   composition: "150g de poitrine de poulet, 1 tasse de quinoa cuit, mélange d'herbes (thym, romarin, persil), jus de citron, sel et poivre.",
@@ -26,7 +26,7 @@ Meal.create(
   calorie: 400
 )
 
-Meal.create(
+meal3 = Meal.create(
   img: "https://www.sobeys.com/wp-content/uploads/2020/05/Recipe_Easy_Black_Bean_Burritos_A_sobeys.jpg",
   title: "Wrap végétarien aux haricots noirs",
   composition: "Tortilla de blé entier, 1 tasse de haricots noirs cuits, guacamole, laitue, tomates, oignons rouges, sauce au yaourt, sel et poivre.",
@@ -34,7 +34,7 @@ Meal.create(
   calorie: 300
 )
 
-Meal.create(
+meal4 = Meal.create(
   img: "https://menu-vegetarien.com/storage/2022/01/recette-vegan-bowl-quinoa-legumes-rotis.jpg",
   title: "Bol de quinoa aux légumes rôtis",
   composition: "1 tasse de quinoa cuit, carottes rôties, brocoli, poivrons, courgettes, 2 cuillères à soupe d'huile d'olive, herbes de Provence, sel et poivre.",
@@ -42,7 +42,7 @@ Meal.create(
   calorie: 380
 )
 
-Meal.create(
+meal5 = Meal.create(
   img: "https://img.cuisineaz.com/1280x720/2016/04/28/i20979-paves-de-saumon-aux-epinards.jpg",
   title: "Saumon grillé au citron et épinards",
   composition: "150g de saumon, jus de citron, ail, épinards sautés, 1 cuillère à soupe d'huile d'olive, sel et poivre.",
@@ -50,7 +50,7 @@ Meal.create(
   calorie: 420
 )
 
-Meal.create(
+meal6 = Meal.create(
   img: "https://resize-public.ladmedia.fr/img/var/public/storage/images/creates/recette-de-salade-de-lentilles-a-la-mediterraneenne-1770948/47568184-1-fre-FR/Recette-de-salade-de-lentilles-a-la-mediterraneenne.jpg",
   title: "Salade de lentilles méditerranéenne",
   composition: "1 tasse de lentilles cuites, tomates cerises, concombres, olives noires, feta, vinaigrette à l'huile d'olive et au citron, sel et poivre.",
@@ -58,7 +58,7 @@ Meal.create(
   calorie: 320
 )
 
-Meal.create(
+meal7 = Meal.create(
   img: "https://img.over-blog-kiwi.com/0/93/19/95/20200608/ob_16ba85_poke-bowl-crevettes.jpg",
   title: "Poke bowl aux crevettes",
   composition: "Riz vinaigré, crevettes marinées, avocat, mangue, concombre, edamame, sauce soja, graines de sésame.",
@@ -66,7 +66,7 @@ Meal.create(
   calorie: 380
 )
 
-Meal.create(
+meal8 = Meal.create(
   img: "https://www.chronodrive.com/le-studio/wp-content/uploads/2022/08/spaghetti-vege.jpg",
   title: "Pâtes de courgettes à la bolognaise végétalienne",
   composition: "Courgettes en spirales, sauce bolognaise à base de lentilles, tomates, oignons, ail, basilic, sel et poivre.",
@@ -74,7 +74,7 @@ Meal.create(
   calorie: 350
 )
 
-Meal.create(
+meal9 = Meal.create(
   img: "https://m1.zeste.ca/serdy-m-dia-inc/image/upload/f_auto/fl_lossy/q_auto:eco/x_585,y_857,w_4545,h_2557,c_crop/w_1200,h_630,c_fill/v1521127712/foodlavie/prod/recettes/salade-repas-au-quinoa-et-poulet-grille-f9c33905",
   title: "Salade de poulet grillé au quinoa",
   composition: "150g de poitrine de poulet grillée, 1 tasse de quinoa cuit, concombres, tomates cerises, avocat, vinaigrette légère à la moutarde, sel et poivre.",
@@ -82,7 +82,7 @@ Meal.create(
   calorie: 420
 )
 
-Meal.create(
+meal10 = Meal.create(
   img: "https://img.freepik.com/photos-premium/petit-dejeuner-sain-bol-smoothie-aux-baies-garni-granola-banane_831238-1112.jpg",
   title: "Bol de smoothie aux baies et granola",
   composition: "1 tasse de baies mélangées (fraises, myrtilles, framboises), 1 banane, 1 tasse de yaourt grec, 1/2 tasse de granola, miel.",
@@ -90,7 +90,7 @@ Meal.create(
   calorie: 300
 )
 
-Meal.create(
+meal11 = Meal.create(
   img: "https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2Ff8442032-20df-4897-8bee-cb6f3e3d5f30.2Ejpeg/422x211/quality/70/crop-from/center/wrap-au-thon.jpeg",
   title: "Wraps de laitue au thon et avocat",
   composition: "Thon en conserve, avocat tranché, tomates, maïs, haricots noirs, sauce à la coriandre, feuilles de laitue pour l'enveloppe.",
@@ -98,7 +98,7 @@ Meal.create(
   calorie: 320
 )
 
-Meal.create(
+meal12 = Meal.create(
   img: "https://cdn.pratico-pratiques.com/app/uploads/sites/3/2018/08/24081746/one-pot-pasta-au-ble-entier-et-aux-legumes-550x550.jpeg",
   title: "Pâtes de blé entier aux légumes grillés",
   composition: "Pâtes de blé entier cuites, courgettes, poivrons, champignons, tomates séchées, ail, huile d'olive, basilic, sel et poivre.",
@@ -106,7 +106,7 @@ Meal.create(
   calorie: 380
 )
 
-Meal.create(
+meal13 = Meal.create(
   img: "https://m1.zeste.ca/serdy-m-dia-inc/image/upload/f_auto/fl_lossy/q_auto:eco/x_0,y_0,w_1288,h_724,c_crop/w_1200,h_630,c_fill/v1507086296/foodlavie/prod/recettes/smoothie-energie-6931b613",
   title: "Smoothie vert énergisant",
   composition: "Poignée d'épinards frais, 1 banane, 1 pomme, 1/2 concombre, jus de citron, eau de coco, glaçons.",
@@ -114,7 +114,7 @@ Meal.create(
   calorie: 250
 )
 
-Meal.create(
+meal14 = Meal.create(
   img: "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/bol-burrito-au-boeuf-a-la-mexicaine-6cdbbfbb.jpg",
   title: "Bol de burrito aux haricots noirs",
   composition: "Riz brun cuit, haricots noirs, maïs, poivrons, oignons, guacamole, salsa, coriandre, jus de lime, sel et poivre.",
@@ -122,7 +122,7 @@ Meal.create(
   calorie: 380
 )
 
-Meal.create(
+meal15 = Meal.create(
   img: "https://cdn.pratico-pratiques.com/app/uploads/sites/3/2022/01/18154829/salade-de-quinoa-aux-crevettes-avocat-et-mangue.jpg",
   title: "Salade de quinoa aux crevettes et avocat",
   composition: "100g de crevettes cuites, 1 tasse de quinoa cuit, avocat tranché, concombre, tomates cerises, menthe fraîche, vinaigrette à la mangue, sel et poivre.",
@@ -130,7 +130,7 @@ Meal.create(
   calorie: 350
 )
 
-Meal.create(
+meal16 = Meal.create(
   img: "https://cdn.pratico-pratiques.com/app/uploads/sites/3/2018/08/20185225/tortillas-au-poulet-cajun-1.jpeg",
   title: "Wrap au poulet cajun",
   composition: "150g de poulet cajun grillé, laitue, tomates, poivrons, oignons rouges, fromage feta émietté, tortilla de blé entier.",
@@ -138,7 +138,7 @@ Meal.create(
   calorie: 420
 )
 
-Meal.create(
+meal17 = Meal.create(
   img: "https://www.delscookingtwist.com/wp-content/uploads/2016/04/Exotic-Mango-Smoothie-Bowl_0080bis.jpg",
   title: "Bol de smoothie tropical",
   composition: "Ananas, mangue, banane, épinards frais, yaourt à la noix de coco, eau de coco, graines de chia.",
@@ -146,7 +146,7 @@ Meal.create(
   calorie: 300
 )
 
-Meal.create(
+meal18 = Meal.create(
   img: "https://lescommis-strapi-media.s3.eu-west-3.amazonaws.com/Spaghetti_aux_Tomates_Sechees_et_Feta_r_16ef0b11f4.jpg",
   title: "Pâtes aux tomates séchées et épinards",
   composition: "Pâtes de blé entier, tomates séchées, épinards frais, ail, pignons de pin, parmesan râpé, huile d'olive, sel et poivre.",
@@ -154,7 +154,7 @@ Meal.create(
   calorie: 360
 )
 
-Meal.create(
+meal19 = Meal.create(
   img: "https://wordpress.potagercity.fr/wp-content/uploads/2019/09/recette_curry_legume.jpg",
   title: "Bol de riz au curry de légumes",
   composition: "Riz basmati, curry de légumes (carottes, pois, chou-fleur, pois chiches), noix de cajou, coriandre fraîche.",
@@ -162,7 +162,7 @@ Meal.create(
   calorie: 380
 )
 
-Meal.create(
+meal20 = Meal.create(
   img: "https://img.cuisineaz.com/1024x1024/2016/10/04/i81831-omelette-aux-epinards-champignons-et-cheddar.jpg",
   title: "Omelette aux champignons et épinards",
   composition: "Œufs, champignons tranchés, épinards frais, oignon, fromage suisse râpé, sel et poivre.",
@@ -170,7 +170,7 @@ Meal.create(
   calorie: 280
 )
 
-Meal.create(
+meal21 = Meal.create(
   img: "https://www.undejeunerdesoleil.com/wp-content/uploads/2015/07/Salade_poivrons_feta.jpg",
   title: "Salade grecque aux poivrons grillés",
   composition: "Concombre, poivrons grillés, tomates, olives kalamata, feta, oignon rouge, origan, vinaigrette à l'huile d'olive et au citron, sel et poivre.",
@@ -178,7 +178,7 @@ Meal.create(
   calorie: 340
 )
 
-Meal.create(
+meal22 = Meal.create(
   img: "https://images.squarespace-cdn.com/content/v1/6071eec62519e02f941f66e1/f7408d67-a969-44ce-b947-a5a7072bb19a/ramen-vegetarien.jpg",
   title: "Bol de ramen végétalien",
   composition: "Nouilles de riz, bouillon de légumes, tofu sauté, champignons shiitake, épinards, carottes râpées, oignons verts, graines de sésame.",
@@ -186,7 +186,7 @@ Meal.create(
   calorie: 320
 )
 
-Meal.create(
+meal23 = Meal.create(
   img: "https://fr.chatelaine.com/wp-content/uploads/2018/07/bol-quinoa-mediterraneenne-800.jpg",
   title: "Bol de quinoa aux légumes méditerranéens",
   composition: "Quinoa cuit, aubergines grillées, poivrons, tomates séchées, olives noires, fromage feta, vinaigrette à l'huile d'olive et au basilic, sel et poivre.",
@@ -194,7 +194,7 @@ Meal.create(
   calorie: 360
 )
 
-Meal.create(
+meal24 = Meal.create(
   img: "https://m1.zeste.ca/serdy-m-dia-inc/image/upload/f_auto/fl_lossy/q_auto:eco/x_0,y_1233,w_4480,h_2520,c_crop/w_576,h_324,c_scale/v1516995229/foodlavie/prod/recettes/bol-du-bouddha-5901e790",
   title: "Bol de Buddha aux légumes méditerranéens",
   composition: "Quinoa cuit, aubergines grillées, poivrons, courgettes, olives Kalamata, hummus, herbes fraîches, huile d'olive, sel et poivre.",
@@ -202,7 +202,7 @@ Meal.create(
   calorie: 380
 )
 
-Meal.create(
+meal25 = Meal.create(
   img: "https://cac.img.pmdstatic.net/fit/~1~cac~2021~10~06~db0fc2b4-fc13-48f5-b7bf-33e57223d1b0.jpeg/650x325/quality/80/crop-from/center/rouleaux-de-saumon-fume-a-la-roquette-de-fromage-frais.jpeg",
   title: "Roulés de laitue au saumon fumé et fromage frais",
   composition: "Feuilles de laitue, saumon fumé, fromage frais, câpres, aneth frais, jus de citron, poivre noir.",
@@ -210,7 +210,7 @@ Meal.create(
   calorie: 250
 )
 
-Meal.create(
+meal26 = Meal.create(
   img: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/AD6D4CAE-F78C-4207-8191-F2109126E327/Derivates/2CD7AE98-60FC-4409-8388-6FD6FB606CC6.jpg",
   title: "Bol de riz aux légumes sautés",
   composition: "Riz complet cuit, brocoli, carottes, champignons, poivrons, sauce soja légère, gingembre, ail, graines de sésame.",
@@ -218,7 +218,7 @@ Meal.create(
   calorie: 340
 )
 
-Meal.create(
+meal27 = Meal.create(
   img: "https://brandsitesplatform-res.cloudinary.com/image/fetch/w_1540,c_scale,q_auto:eco,f_auto,fl_lossy,dpr_1.0,e_sharpen:85/https://assets.brandplatform.generalmills.com%2F-%2Fmedia%2Fproject%2Fgmi%2Foldelpaso%2Foldelpaso-ch%2Foepp%2Fcreate-recipes-images%2Fvegane-tacos-mit-schwarzen-bohnen-ch.png%3Fw%3D620%26rev%3Db11d3aed9dc1474881886c81fe26a635%201540w",
   title: "Tacos végétariens aux haricots noirs",
   composition: "Tortillas de maïs, haricots noirs cuits, maïs, avocat, salsa fraîche, coriandre, lime, sel et poivre.",
@@ -226,7 +226,7 @@ Meal.create(
   calorie: 300
 )
 
-Meal.create(
+meal28 = Meal.create(
   img: "https://lh3.googleusercontent.com/proxy/9xxsRFIQvLyoUeQPQJm2fiIzwCVFYYde72yXa7MXOqCv4OFyCHqpJM0SveBK6rsrEs1yNo-OGbuB2UgVzGqljLOG0hscmrSVFj_4Hx4AlckyzAc24skZ0baAqSvUeM55e7PbvNFNhvrBiiPLyTw",
   title: "Salade de chou frisé aux agrumes et noix",
   composition: "Chou frisé émincé, quartiers d'orange, avocat, noix, vinaigrette à l'huile d'olive et au citron, parmesan râpé, sel et poivre.",
@@ -234,7 +234,7 @@ Meal.create(
   calorie: 280
 )
 
-Meal.create(
+meal29 = Meal.create(
   img: "https://www.delscookingtwist.com/wp-content/uploads/2022/04/Pistachio-Pesto-Pasta-with-Burrata-Cheese_6.jpg",
   title: "Pâtes de lentilles au pesto de basilic",
   composition: "Pâtes de lentilles cuites, pesto de basilic maison (basilic, pignons de pin, parmesan, ail, huile d'olive), tomates cerises, épinards.",
@@ -242,7 +242,7 @@ Meal.create(
   calorie: 360
 )
 
-Meal.create(
+meal30 = Meal.create(
   img: "https://sharkninja-cookingcircle.s3.eu-west-1.amazonaws.com/wp-content/uploads/2021/10/14081941/Tropical-Smoothie-Bowl.jpg",
   title: "Bol de smoothie tropical",
   composition: "Ananas, mangue, banane, yaourt à la noix de coco, jus d'orange, glaçons.",
@@ -315,3 +315,9 @@ Exercice.create(title: "Circuit d'agilité", composition: "Agility ladder drills
 Exercice.create(title: "Entraînement de natation", composition: "Nage libre, Brasse, Plongeons", description: "Travaillez votre endurance et renforcez vos muscles avec cet entraînement de natation. La nage libre, la brasse et les plongeons sollicitent l'ensemble du corps.", category: "full body", img: "")
 
 Exercice.create(title: "Yoga pour la force intérieure", composition: "Postures de guerrier, Chaturanga, Méditation", description: "Renforcez votre force intérieure avec cet entraînement de yoga. Les postures de guerrier, chaturanga et méditation favorisent l'équilibre entre le corps et l'esprit.", category: "full body", img: "")
+
+# daily_meal1 = DailyMeal.create(:user, :date, :calories_goal)
+
+# daily_meal_meal1 = DailyMealMeal.create(:meal1)
+# daily_meal_meal1 = DailyMealMeal.create(:meal2)
+# daily_meal_meal1 = DailyMealMeal.create(:meal3)
