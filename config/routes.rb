@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resource :onboardings, only: [:edit, :update]
+  resource :onboardings, only: [:edit, :update] do
+      member do
+        get 'resume'
+      end
+  end
   resource :dashboards, only: [:show]
   resources :exercices, only: [:index, :show]
   resources :daily_meals, only: [:show]

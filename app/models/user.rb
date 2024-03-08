@@ -31,10 +31,11 @@ def calculate_daily_calories
 end
 
 def calculate_bmr
+  size_in_meters = size / 100.0
   if sexe == 'male'
-    (13.707 * weight) + (492.3 * size) - (6.673 * year) + 77.607
+    (13.707 * weight) + (492.3 * size_in_meters) - (6.673 * year) + 77.607
   else
-    (9.740 * weight) + (172.9 * size) - (4.737 * year) + 667.051
+    (9.740 * weight) + (172.9 * size_in_meters) - (4.737 * year) + 667.051
   end
 end
 
@@ -51,6 +52,6 @@ def determine_activity_multiplier
   else
     raise "Invalid training level"
   end
-  
+
 end
 end

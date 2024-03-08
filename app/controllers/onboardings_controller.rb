@@ -3,10 +3,14 @@ class OnboardingsController < ApplicationController
     @user = current_user
   end
 
+  def resume
+    @user = current_user
+  end
+
   def update
     @user = current_user
     @user.update(onboarding_params)
-    redirect_to dashboards_path
+    redirect_to resume_onboardings_path
   end
 
   private
