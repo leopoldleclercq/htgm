@@ -7,8 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'date'
+
 Meal.destroy_all
 Exercice.destroy_all
+User.destroy_all
+DailyMeal.destroy_all
+DailyMealMeal.destroy_all
 
 meal1 = Meal.create(
   img: "https://www.unlockfood.ca/EatRightOntario/media/Website-images-resized/Recipe%20Images%20-resized/Vegetable-Quinoa-Salad-resized.jpg",
@@ -316,8 +321,22 @@ Exercice.create(title: "Entraînement de natation", composition: "Nage libre, Br
 
 Exercice.create(title: "Yoga pour la force intérieure", composition: "Postures de guerrier, Chaturanga, Méditation", description: "Renforcez votre force intérieure avec cet entraînement de yoga. Les postures de guerrier, chaturanga et méditation favorisent l'équilibre entre le corps et l'esprit.", category: "full body", img: "")
 
-# daily_meal1 = DailyMeal.create(:user, :date, :calories_goal)
+user1 = User.create!(
+  email: 'test@mail.com',
+  password: 'secret',
+  first_name: "Leonardo",
+  last_name: "DiCaprio",
+  sexe: "male",
+  size: 1.83,
+  training: 1,
+  goal: "muscles",
+  body_fat: 30,
+  weight: 90,
+  calorie_counter: 1780
+)
+p today = Date.today
+daily_meal1 = DailyMeal.create!(user: user1, date_of_meals: Date.today, calorie_goal: 1000)
 
-# daily_meal_meal1 = DailyMealMeal.create(:meal1)
-# daily_meal_meal1 = DailyMealMeal.create(:meal2)
-# daily_meal_meal1 = DailyMealMeal.create(:meal3)
+daily_meal_meals1 = DailyMealMeal.create!(meal: meal3, daily_meal: daily_meal1)
+daily_meal_meals2 = DailyMealMeal.create!(meal: meal1, daily_meal: daily_meal1)
+daily_meal_meals3 = DailyMealMeal.create!(meal: meal2, daily_meal: daily_meal1)

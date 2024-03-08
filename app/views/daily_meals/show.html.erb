@@ -1,0 +1,14 @@
+<h1>Mes Repas du Jour</h1>
+
+<ul>
+  <% @meals.each do |meal| %>
+    <li>
+      <%= link_to meal_path(meal) do %>
+        <div class="meal">
+          <p><%= meal.title %></p>
+          <p><strong><%= meal.calorie %></strong></p>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
