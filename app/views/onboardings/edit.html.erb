@@ -1,32 +1,30 @@
-<div class="container">
-  <div class="row">
+<div class="container sessions">
+
+  <div class="row logo-home">
     <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
   </div>
-  <div class="row">
+
+  <div class="row formulaire-connection">
     <%= simple_form_for @user, url: onboardings_path, method: :patch do |f| %>
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :sexe %>
-      <%= f.input :size %>
-      <%= f.input :goal %>
-      <%= f.input :training %>
-      <%= f.input :body_fat %>
-      <%= f.input :weight %>
-      <%= f.submit 'Valider', class: 'btn btn-primary' %>
+      <%= f.input :first_name, label: "Prénom", label_html: { class: "form-label" } %>
+      <%= f.input :last_name, label: "Nom", label_html: { class: "form-label" } %>
+      <%= f.input :sexe, label: "Sexe", label_html: { class: "form-label" } do %>
+      <%= f.select :sexe, ['Male', 'Female'], { prompt: 'choisissez votre sexe' }, { class: 'form-control' } %>
+      <% end %>
+      <%= f.input :size, label: "Taille", label_html: { class: "form-label" } %>
+      <%= f.input :goal, label: "Objectif", label_html: { class: "form-label" } do %>
+      <%= f.select :goal, ['Prise de muscle sans prise de gras', 'Perte de gras sans perte de muscle'], { prompt: 'Choisissez votre objectif' }, { class: 'form-control' } %>
+      <% end %>
+      <%= f.input :year, label: "Année de naissance", label_html: { class: "form-label" } %>
+      <%= f.input :training, label: "Entraînement", label_html: { class: "form-label" } do %>
+      <%= f.select :training, [0, 1, 2, 3, 4, 5, 6, 7], { prompt: 'Choisissez votre niveau d\'entraînement' }, { class: 'form-control' } %>
+      <% end %>
+      <%= f.input :body_fat, label: "Masse grasse", label_html: { class: "form-label" } %>
+      <%= f.input :weight, label: "Poids", label_html: { class: "form-label" } %>
+      <%= f.submit 'Valider', class: 'btn btn-connection btn-primary' %>
     <% end %>
   </div>
-  <div class="row">
-      <% if @user.persisted? %>
-        <h1>Vos informations</h1>
 
-        <p>Nom: <%= @user.last_name %></p>
-        <p>Prénom: <%= @user.first_name %></p>
-        <p>Sexe: <%= @user.sexe %></p>
-        <p>Size: <%= @user.size %></p>
-        <p>Goal: <%= @user.goal %></p>
-        <p>Training: <%= @user.training %></p>
-        <p>body_fat: <%= @user.body_fat %></p>
-        <p>weight: <%= @user.weight %></p>
-       <% end %>
-  </div>
+
+
 </div>

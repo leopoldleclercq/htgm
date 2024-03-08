@@ -40,3 +40,23 @@
   margin: 20px;
   width: 60%;
 }
+
+.summary {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.summary h1 {
+  color: #1D3D57;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.summary p {
+  color: #333333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}

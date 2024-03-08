@@ -1,0 +1,27 @@
+<div class="container sessions">
+
+  <div class="row logo-home">
+    <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
+  </div>
+
+  <div class="row connection">
+    <% if @user.persisted? %>
+      <div class="summary">
+        <h1>Votre Résumé</h1>
+        <p><strong>Nom:</strong> <%= @user.last_name %></p>
+        <p><strong>Prénom:</strong> <%= @user.first_name %></p>
+        <p><strong>Sexe:</strong> <%= @user.sexe %></p>
+        <p><strong>Taille:</strong> <%= @user.size %></p>
+        <p><strong>Objectif:</strong> <%= @user.goal %></p>
+        <p><strong>Année de naissance:</strong> <%= @user.year %></p>
+        <p><strong>Entraînement:</strong> <%= @user.training %></p>
+        <p><strong>Masse grasse:</strong> <%= @user.body_fat %></p>
+        <p><strong>Poids:</strong> <%= @user.weight %></p>
+      </div>
+      <div class="btn-summary">
+          <%= link_to "Valider vos informations", dashboards_path, class: "btn btn-connection" %>
+        </div>
+    <% end %>
+  </div>
+
+</div>
