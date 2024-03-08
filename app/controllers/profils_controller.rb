@@ -15,11 +15,10 @@ class ProfilsController < ApplicationController
   def update
   end
 
-
   private
 
   def set_profil
-    @profil = Profil.find(params[:id])
+    @user = current_user
   end
 
   def profil_params

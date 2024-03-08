@@ -1,24 +1,42 @@
 <div class="dashboard-page">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-6">
+        <!-- Bouton Calendrier -->
+        <button type="button" class="btn btn-secondary"><i class="bi bi-calendar"></i></button>
+      </div>
+      <div class="col-6 text-end">
+        <!-- Bouton Loupe -->
+        <button type="button" class="btn btn-secondary"><i class="bi bi-search"></i></button>
+      </div>
+    </div>
 
-  <div class="search">
 
-  </div>
+    <div class="row justify-content-center align-items-center" style="height: 70vh;">
+      <div class="col text-center">
+        <!-- Bonhomme au centre -->
+       <%= image_tag('image.png', alt: 'bonhomme', class: "img-fluid", style: "max-width: 400px; max-height: 400px;") %>
+        <div class="progress mt-3">
+          <!-- Barre de progression -->
+          <div class="progress-bar" role="progressbar" style="width: <%= current_user.calorie_counter %>%;" aria-valuenow="<%= current_user.calorie_counter %>" aria-valuemin="0" aria-valuemax="100"><%= current_user.calorie_counter %>kcal</div>
+        </div>
+        <!-- Bouton Entraînement -->
+        <button type="button" class="btn btn-primary mt-3">Entraînement fait</button>
+      </div>
+    </div>
 
-  <div class="dashboard-body">
-  </div>
 
-  <div class="navbar_dashboard_bot">
-    <nav class="navbar-dashboard">
-      <div class="exercices-dashboard">
-        <%= link_to exercices_path do %>
-          <%# mettre logo exercice %>
-          <p>exercices</p>
+    <div class="row mt-3">
+      <div class="col">
+        <!-- Bouton Exercices -->
+        <%= link_to exercices_path, class: "btn btn-info w-100" do %>
+          <i class="bi bi-person"></i> Exercices
         <% end %>
       </div>
-      <div class="profil-dashboard">
-        <%= link_to profils_path do %>
-          <%# mettre logo profil %>
-          <p>profil</p>
+      <div class="col">
+        <!-- Bouton Profil -->
+        <%= link_to profils_path, class: "btn btn-info w-100" do %>
+          <i class="bi bi-person"></i> Profil
         <% end %>
       </div>
       <div class="meal-dashboard">
@@ -29,7 +47,6 @@
           <% end %>
         <% end %>
       </div>
-    </nav>
+    </div>
   </div>
-
 </div>
