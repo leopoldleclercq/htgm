@@ -1,53 +1,57 @@
 <div class="dashboard-page">
   <div class="container">
-    <div class="row mt-3">
-      <div class="col-6">
-        <!-- Bouton Calendrier -->
-        <button type="button" class="btn btn-secondary"><i class="bi bi-calendar"></i></button>
-      </div>
-      <div class="col-6 text-end">
-        <!-- Bouton Loupe -->
-        <button type="button" class="btn btn-secondary"><i class="bi bi-search"></i></button>
-      </div>
+    <div class="row mt-3 justify-content-between">
+
+        <!-- Bouton Calendrier sans couleur d'arrière-plan et icône bleu foncé -->
+        <button type="button" class="calendar btn btn-clear">
+          <i class="bi bi-calendar icon-dark-blue"></i>
+          <i class="fa-solid fa-calendar-days fa-2xl icon-dark-blue"></i>
+        </button>
+
     </div>
 
+      <!-- Bouton Loupe sans couleur d'arrière-plan et icône bleu foncé -->
+      <button type="button" class="btn btn-clear">
+        <i class="bi bi-search icon-dark-blue"></i>
+        <i class="fa-solid fa-magnifying-glass fa-2xl icon-dark-blue"></i>
+      </button>
+
+  </div>
 
     <div class="row justify-content-center align-items-center" style="height: 70vh;">
       <div class="col text-center">
         <!-- Bonhomme au centre -->
-       <%= image_tag('image.png', alt: 'bonhomme', class: "img-fluid", style: "max-width: 400px; max-height: 400px;") %>
-        <div class="progress mt-3">
+        <%= image_tag('unpeumuscle.png', alt: 'bonhomme', class: "img-fluid", style: "max-width: 400px; max-height: 600px;") %>
+        <div class="progress mt-3" style="margin: auto; width: 80%; height: 40px;">
           <!-- Barre de progression -->
-          <div class="progress-bar" role="progressbar" style="width: <%= current_user.calorie_counter %>%;" aria-valuenow="<%= current_user.calorie_counter %>" aria-valuemin="0" aria-valuemax="100"><%= current_user.calorie_counter %>kcal</div>
+          <div class="progress-bar" role="progressbar" style="width: <%= current_user.calorie_counter %>%;" aria-valuenow="<%= current_user.calorie_counter %>" aria-valuemin="0" aria-valuemax="100"><%= current_user.calorie_counter %> kcal</div>
         </div>
+        <p class="mt-2">Calories: <%= current_user.calorie_counter %> kcal</p>
         <!-- Bouton Entraînement -->
-        <button type="button" class="btn btn-primary mt-3">Entraînement fait</button>
+        <button type="button" class="btn mt-5" style="background-color: #FF6E41;">Entraînement fait</button>
       </div>
     </div>
 
-
-    <div class="row mt-3">
-      <div class="col">
-        <!-- Bouton Exercices -->
-        <%= link_to exercices_path, class: "btn btn-info w-100" do %>
-          <i class="bi bi-person"></i> Exercices
-        <% end %>
-      </div>
-      <div class="col">
-        <!-- Bouton Profil -->
-        <%= link_to profils_path, class: "btn btn-info w-100" do %>
-          <i class="bi bi-person"></i> Profil
-        <% end %>
-      </div>
-      <div class="meal-dashboard">
-        <% @daily_meals.each do |daily_meal| %>
-          <%= link_to daily_meal_path(daily_meal) do %>
-            <%# mettre logo meal %>
-            <p>repas du jour</p>
-          <% end %>
-        <% end %>
-      </div>
+    <!-- Barre de navigation pour Exercices et Profil -->
+    <div class="nav-bar">
+      <%= link_to exercices_path, class: "nav-item" do %>
+        <i class="bi bi-person"><i class="fa-solid fa-dumbbell fa-2xl"></i></i>
+      <% end %>
+      <%= link_to profils_path, class: "nav-item" do %>
+        <i class="bi bi-person"><i class="fa-solid fa-user fa-2xl"></i></i>
+      <% end %>
+      <%= link_to exercices_path, class: "nav-item" do %>
+        <i class="bi bi-person"><i class="fa-solid fa-drumstick-bite fa-2xl"></i></i>
+      <% end %>
     </div>
-    <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item m-5", data: {turbo_method: :delete} %>
+
+    <div class="meal-dashboard">
+      <% @daily_meals.each do |daily_meal| %>
+        <%= link_to daily_meal_path(daily_meal) do %>
+          <p>repas du jour</p>
+        <% end %>
+      <% end %>
+    </div>
+
   </div>
 </div>
