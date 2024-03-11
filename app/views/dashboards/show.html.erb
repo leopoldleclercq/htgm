@@ -40,11 +40,9 @@
         <% end %>
       </div>
       <div class="meal-dashboard">
-        <% @daily_meals.each do |daily_meal| %>
-          <%= link_to daily_meal_path(daily_meal) do %>
-            <%# mettre logo meal %>
-            <p>repas du jour</p>
-          <% end %>
+        <%= link_to daily_meals_path do %>
+          <%# mettre logo meal %>
+          <p>repas du jour</p>
         <% end %>
       </div>
     </div>

@@ -14,11 +14,10 @@ Rails.application.routes.draw do
   end
   resource :dashboards, only: [:show]
   resources :exercices, only: [:index, :show]
-  resources :daily_meals, only: [:show]
+  resources :daily_meals, only: [:index]
   resources :meals, only: [:show]
   resources :foods, only: [:new, :update]
   resource :profils, only: [:show, :edit, :update]
-
   # Defines the root path route ("/")
   # root "posts#index"
 end

@@ -1,0 +1,32 @@
+<div class="daily-meal-page">
+  <div class="nav-bar">
+    <div class="arrow-back">
+      <%= link_to dashboards_path do %>
+        <%# utiliser font anwsome pour la fleche retour %>
+        <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
+    </div>
+    <div class="food">
+      <i class="fa-solid fa-utensils fa-2xl"></i>
+    </div>
+  </div>
+  <div class="container">
+      <h2>Repas de la journée</h2>
+      <div class="meal_card">
+          <% @daily_meal.meals.each do |meal| %>
+            <div class="meal row">
+              <%= link_to meal_path(meal) do %>
+              <img src="<%= meal.img %>" alt="<%= meal.title %>">
+              <% end %>
+              <div class="title col-9">
+                <h4><%= meal.title %></h4>
+              </div>
+              <div class="calories col-3">
+                <p><strong><%= meal.calorie %></strong> cal</p>
+              </div>
+            </div>
+
+          <% end %>
+      </div>
+  </div>
+</div>

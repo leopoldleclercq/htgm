@@ -1,6 +1,5 @@
 class DailyMealsController < ApplicationController
-  def show
-    @daily_meal = DailyMeal.find(params[:id])
-    @meals = @daily_meal.meals
+  def index
+    @daily_meal = DailyMeal.find_by(user: current_user, date_of_meals: Date.today)
   end
 end
