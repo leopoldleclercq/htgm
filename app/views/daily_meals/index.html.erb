@@ -16,7 +16,7 @@
           <% @daily_meal.meals.each do |meal| %>
             <div class="meal row">
               <%= link_to meal_path(meal) do %>
-              <img src="<%= meal.img %>" alt="<%= meal.title %>">
+              <img src="<%= meal.img %>" class="img-daily-meal" alt="<%= meal.title %>">
               <% end %>
               <div class="title col-9">
                 <h4><%= meal.title %></h4>
