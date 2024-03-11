@@ -1,4 +1,4 @@
-.nav-bar {
+.nav-bar-daily-meal {
   background-color: #EBE7D6;
   position: fixed;
   width: 100%;
@@ -20,8 +20,10 @@ i {
 }
 }
 
-.container {
+.container-meal {
   padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 img {
@@ -30,7 +32,7 @@ img {
   border-radius: 10px;
 }
 
-.meal_card {
+.meal-card {
   padding: 20px;
 }
 
@@ -43,7 +45,7 @@ img {
   align-items: end;
 }
 
-.daily-meal-page {
+.daily-meal {
   height: 100%;
   background-color: #1D3D57;
 }

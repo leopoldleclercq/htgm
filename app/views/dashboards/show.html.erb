@@ -40,18 +40,9 @@
       <%= link_to profils_path, class: "nav-item" do %>
         <i class="bi bi-person"><i class="fa-solid fa-user fa-2xl"></i></i>
       <% end %>
-      <%= link_to exercices_path, class: "nav-item" do %>
+      <%= link_to daily_meals_path, class: "nav-item" do %>
         <i class="bi bi-person"><i class="fa-solid fa-drumstick-bite fa-2xl"></i></i>
       <% end %>
     </div>
-
-    <div class="meal-dashboard">
-      <% @daily_meals.each do |daily_meal| %>
-        <%= link_to daily_meal_path(daily_meal) do %>
-          <p>repas du jour</p>
-        <% end %>
-      <% end %>
-    </div>
-
   </div>
 </div>
