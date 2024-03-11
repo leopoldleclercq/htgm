@@ -1,6 +1,6 @@
 <div class="sessions">
-  <div class="logo-home">
-    <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
+  <div>
+    <%= image_tag('logo1.png',class:'logo-connection', alt: 'Logo de l\'application') %>
   </div>
   <div class="formulaire-connection">
   <h2 class="log">Se connecter</h2>
@@ -20,6 +20,6 @@
         <%= f.button :submit, "Me connecter", class:"btn-connection"%>
       </div>
     <% end %>
-    <%= render "devise/shared/links" %>
   </div>
+  <%= render "devise/shared/links" %>
 </div>
