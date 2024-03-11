@@ -1,0 +1,68 @@
+body {
+  background-color: #EBE7D6;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.btn-clear {
+  background-color: transparent; /* Enlève le fond bleu */
+  border: none;
+}
+
+/* Barre de progression ajustée */
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.progress-bar {
+  background: linear-gradient(to right, #ff0000, #008000);
+  border-radius: 20px;
+}
+
+/* Icônes de navigation en bas de la page */
+.nav-bar {
+  position: fixed; /* Ajoutez cette propriété pour fixer la barre de navigation */
+  left: 0; /* Alignez à gauche */
+  bottom: 0; /* Alignez en bas */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1D3D57; /* Bleu foncé */
+}
+
+.nav-item {
+  color: #FF6E41; /* Couleur légèrement différente pour ressortir sur le fond bleu foncé */
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px; /* Ajuste la taille du texte si nécessaire */
+}
+
+/* Boutons et icônes */
+.btn-clear {
+  background-color: transparent; /* Enlève la couleur d'arrière-plan */
+  border: none; /* Enlève la bordure */
+  padding: 0; /* Ajuste le padding si nécessaire */
+  color: #1D3D57; /* Assure que le texte (s'il y en a) est également en bleu foncé */
+}
+
+.icon-dark-blue {
+  color: #1D3D57; /* Bleu foncé */
+}
+.dashboard-page {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.calendar {
+  padding-left: 10px;
+}
