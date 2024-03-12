@@ -1,8 +1,8 @@
 <div class="meal-home">
-  <div class="nav-bar">
+  <div class="nav-bar-daily-meal">
     <div class="arrow-back">
       <%= link_to daily_meals_path do %>
-        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
       <% end %>
     </div>
     <div class="food">
@@ -11,8 +11,8 @@
   </div>
 
   <div class="meal-container">
-    <div class="img-meal">
-      <img src="<%= @meal.img %>" alt="<%= @meal.title %>">
+    <div class="contenu-meal">
+      <img src="<%= @meal.img %>" class="img-meal" alt="<%= @meal.title %>">
       <div class="informations">
         <div class="meal-title">
           <h2><%= @meal.title %></h2>
