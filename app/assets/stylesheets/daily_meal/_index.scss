@@ -5,6 +5,10 @@
   padding: 20px;
 }
 
+.daily-meal-page {
+  background-color: #1D3D57;
+}
+
 .arrow-back {
 i {
   color: #FF6E41;
@@ -73,4 +77,8 @@ h2 {
   width: 60px;
   height: 60px;
   padding-top: 5px;
+}
+
+.meal-link {
+  text-decoration: none;
 }
