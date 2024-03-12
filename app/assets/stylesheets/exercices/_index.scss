@@ -1,0 +1,43 @@
+.nav-bar-exercices {
+  background-color: #EBE7D6;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+}
+
+.icon-exercices {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+i {
+  color: #1D3D57;
+}
+}
+
+.exercices-list {
+  background-color: #1D3D57;
+  padding-top: 90px;
+  list-style-type: none;
+}
+
+.exercice-link {
+  text-decoration: none;
+  color: #EBE7D6;
+}
+
+.list-exe {
+  list-style-type: none;
+  padding: 0;
+}
+
+.exercice-card {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  li {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EBE7D6;
+  }
+}
