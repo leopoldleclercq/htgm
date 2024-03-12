@@ -1,7 +1,37 @@
-<%=current_user.calorie_counter %>
-<%=current_user.first_name %>
-<%=current_user.last_name %>
-<%=current_user.size %>
-<%=current_user.training %>
-<%=current_user.weight %>
-<%=current_user.goal %>
+<div class="profil-page">
+
+  <div class="nav-bar-profil">
+    <div class="arrow-back">
+      <%= link_to dashboards_path do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
+      <% end %>
+    </div>
+    <div class="icon-profil">
+      <i class="fa-regular fa-user fa-2xl"></i>
+    </div>
+  </div>
+
+  <div class="profil-content">
+    <h2>Mes données :</h2>
+    <div class="row">
+      <div class="col-8">
+        <p>Prénom :</p>
+        <p>Nom :</p>
+        <p>Ma taille :</p>
+        <p>Mon poids :</p>
+        <p>Nombres d'entraînement(s) :</p>
+        <p>Mon objectif :</p>
+        <p>Mon apport caloriques journalier :</p>
+      </div>
+
+      <div class="col-4">
+        <p class="user-data"><%=current_user.last_name %></p>
+        <p class="user-data"><%=current_user.first_name %></p>
+        <p class="user-data"><strong><%=current_user.size %></strong> m</p>
+        <p class="user-data"><strong><%=current_user.weight %></strong> kg</p>
+        <p class="user-data"><strong><%=current_user.training %></strong> / week</p>
+        <p class="user-data"><%=current_user.goal %></p>
+        <p class="user-data"><strong><%=current_user.calorie_counter %></strong> cal / jour</p>
+      </div>
+    </div>
+</div>
