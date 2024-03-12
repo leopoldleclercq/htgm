@@ -10,21 +10,21 @@
     </div>
   </div>
   <div class="container-daily-meal">
-      <h2>Repas de la journée</h2>
-      <div class="meal-card">
-          <% @daily_meal.meals.each do |meal| %>
-            <div class="meal row">
-              <%= link_to meal_path(meal) do %>
-              <img src="<%= meal.img %>" class="img-daily-meal" alt="<%= meal.title %>">
-              <% end %>
-              <div class="title col-9">
-                <h4><%= meal.title %></h4>
-              </div>
-              <div class="calories col-3">
-                <p><strong><%= meal.calorie %></strong> cal</p>
-              </div>
+    <h2>Repas de la journée</h2>
+    <div class="meal-card">
+      <% @daily_meal.meals.each do |meal| %>
+        <%= link_to meal_path(meal), class:"meal-link" do %>
+          <div class="meal row">
+            <img src="<%= meal.img %>" class="img-daily-meal" alt="<%= meal.title %>">
+            <div class="title col-9">
+              <h4><%= meal.title %></h4>
             </div>
-          <% end %>
-      </div>
+            <div class="calories col-3">
+              <p><strong><%= meal.calorie %></strong> cal</p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
