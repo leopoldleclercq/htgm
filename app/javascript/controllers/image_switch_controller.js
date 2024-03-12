@@ -4,8 +4,8 @@ export default class extends Controller {
   static targets = ["image"]
 
   switch() {
-    const imageName = this.imageTarget.getAttribute("src");
+    const imageName = this.imageTarget.src;
     const newImage = imageName.includes("unpeumuscle") ? "tresmuscle.png" : "unpeumuscle.png";
-    this.imageTarget.setAttribute("src", `/assets/${newImage}`);
+    this.imageTarget.src = `/assets/${newImage}`;
   }
 }
