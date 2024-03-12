@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+
 i {
   color: #1D3D57;
 }
@@ -17,6 +18,7 @@ i {
 .exercice-page {
   height: 100vh;
   background-color: #1D3D57;
+
 }
 
 .exercice {
@@ -30,4 +32,5 @@ i {
 
 .exercice-title, h4{
   color: #EBE7D6;
+  text-align: center;
 }
