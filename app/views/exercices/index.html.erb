@@ -18,12 +18,14 @@
         <div class="exercice-card">
           <%= link_to exercice_path(exercice), class:"exercice-link" do %>
           <li>
+          <div class="exercice-img">
+              <p><%= image_tag exercice.img, width: "150", height: "150"%></p>
+            </div>
+
             <div class="exercice-title">
               <h4><%= exercice.title %></h4>
             </div>
-            <div class="exercice-img">
-              <p><%= exercice.img %></p>
-            </div>
+
             <div class="exercice-composition">
               <p><%= exercice.composition %></p>
             </div>

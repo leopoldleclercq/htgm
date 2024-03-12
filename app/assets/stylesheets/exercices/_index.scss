@@ -34,10 +34,21 @@ i {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  text-align: center;
   li {
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #EBE7D6;
+    border-radius: 20%;
   }
+}
+
+.exercice-content {
+  display: inline-block; /* Permet à la carte de s'adapter à la taille du contenu */
+  text-align: left; /* Justifie le contenu à l'intérieur de la carte */
+}
+
+.exercice-info {
+  margin-left: 10px; /* Espace entre l'image et les informations */
 }

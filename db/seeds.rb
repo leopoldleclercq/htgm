@@ -256,32 +256,32 @@ meal30 = Meal.create(
 )
 
 Exercice.create(
-  title: "Squats",
-  composition: "1. Échauffement : Jumping jacks, 5 minutes\n2. Squats avec barre, 4 séries de 12 répétitions\n3. Fentes avant avec haltères, 3 séries de 10 de chaque jambe\n4. Soulevé de terre, 4 séries de 8 répétitions\n5. Extensions de jambe à la machine, 3 séries de 15 répétitions\n6. Ischio-jambiers sur machine curl, 3 séries de 12 répétitions",
+  title: "Renforcement des cuisses",
+  composition: "Squats, fentes, upright row, rowing",
   description: "Cette séance de musculation axée sur le bas du corps vise à renforcer les muscles des jambes, des fessiers et du bas du dos. Les squats et les fentes travaillent les quadriceps et les ischio-jambiers, tandis que le soulevé de terre sollicite les muscles du dos et des fessiers. Les extensions de jambe ciblent les quadriceps, et les ischio-jambiers sur la machine curl complètent l'entraînement en renforçant les muscles ischio-jambiers. Intégrer cette séance à votre routine vous aidera à améliorer votre force, votre stabilité et votre posture.",
   category: "Bas du corps",
-  img: ""
+  img: "squat.png"
 )
 
-Exercice.create(title: "Entraînement explosif", composition: "Box jumps, Sprints, Pompes plyométriques", description: "Développez votre puissance explosive avec cet entraînement. Les box jumps, sprints et pompes plyométriques renforcent vos muscles et améliorent votre agilité.", category: "full body", img: "")
+Exercice.create(title: "Renforcement explosif", composition: "Box jumps, Sprints, Pompes plyométriques", description: "Développez votre puissance explosive avec cet entraînement. Les box jumps, sprints et pompes plyométriques renforcent vos muscles et améliorent votre agilité.", category: "full body", img: "box.png")
 
-Exercice.create(title: "Renforcement du noyau", composition: "Planche, Crunchs, Levée de jambes", description: "Travaillez vos abdominaux et renforcez votre noyau avec cet ensemble d'exercices comprenant des planches, des crunchs et des levées de jambes. Améliorez votre stabilité.", category: "bas du corps", img: "")
+Exercice.create(title: "Renforcement abdominal", composition: "Planche, Crunchs, Levée de jambes", description: "Travaillez vos abdominaux et renforcez votre noyau avec cet ensemble d'exercices comprenant des planches, des crunchs et des levées de jambes. Améliorez votre stabilité.", category: "bas du corps", img: "planche.png")
 
-Exercice.create(title: "Entraînement des épaules", composition: "Élévations latérales, Développé militaire, Shrugs", description: "Sculptez vos épaules avec cet entraînement. Les élévations latérales, le développé militaire et les shrugs vous aident à obtenir des épaules définies.", category: "haut du corps", img: "")
+Exercice.create(title: "Renforcement des épaules", composition: "Élévations latérales, Développé militaire, Shrugs", description: "Sculptez vos épaules avec cet entraînement. Les élévations latérales, le développé militaire et les shrugs vous aident à obtenir des épaules définies.", category: "haut du corps", img: "haltere.png")
 
-Exercice.create(title: "Entraînement des jambes", composition: "Squats, Extensions quadriceps, Fentes", description: "Renforcez vos jambes avec cet ensemble d'exercices comprenant des squats, des extensions quadriceps et des fentes. Améliorez la puissance et la stabilité de vos membres inférieurs.", category: "bas du corps", img: "")
+Exercice.create(title: "Renforcement des jambes", composition: "Squats, Extensions quadriceps, Fentes", description: "Renforcez vos jambes avec cet ensemble d'exercices comprenant des squats, des extensions quadriceps et des fentes. Améliorez la puissance et la stabilité de vos membres inférieurs.", category: "bas du corps", img: "fentes.png")
 
-Exercice.create(title: "Circuit cardio express", composition: "Jumping jacks, Burpees, Course à pied", description: "Stimulez votre système cardiovasculaire avec ce circuit rapide. Les jumping jacks, burpees et la course à pied augmentent l'endurance tout en brûlant des calories.", category: "full body", img: "")
+Exercice.create(title: "Renforcement cardio", composition: "Jumping jacks, Burpees, Course à pied", description: "Stimulez votre système cardiovasculaire avec ce circuit rapide. Les jumping jacks, burpees et la course à pied augmentent l'endurance tout en brûlant des calories.", category: "full body", img: "jump.png")
 
-Exercice.create(title: "Entraînement du dos", composition: "Tractions, Rowing, Hyperextensions", description: "Renforcez les muscles de votre dos avec cet ensemble d'exercices, incluant des tractions, du rowing et des hyperextensions. Améliorez la posture et la force dorsale.", category: "haut du corps", img: "")
+Exercice.create(title: "Renforcement du dos", composition: "Tractions, Rowing, Hyperextensions", description: "Renforcez les muscles de votre dos avec cet ensemble d'exercices, incluant des tractions, du rowing et des hyperextensions. Améliorez la posture et la force dorsale.", category: "haut du corps", img: "traction.png")
 
-Exercice.create(title: "Séance de yoga relaxante", composition: "Salutation au soleil, Postures de relaxation, Méditation", description: "Apaisez votre esprit et détendez votre corps avec cette séance de yoga relaxante. La salutation au soleil, les postures de relaxation et la méditation favorisent le bien-être global.", category: "full body", img: "")
+Exercice.create(title: "Renforcement des bras", composition: "Salutation au soleil, Postures de relaxation, Méditation", description: "Apaisez votre esprit et détendez votre corps avec cette séance de yoga relaxante. La salutation au soleil, les postures de relaxation et la méditation favorisent le bien-être global.", category: "full body", img: "groshaltere.png")
 
-Exercice.create(title: "Entraînement des bras", composition: "Curls biceps, Extensions triceps, Pompes", description: "Développez des bras forts avec cet ensemble d'exercices ciblant les biceps et les triceps. Les curls, extensions triceps et pompes vous aident à sculpter des bras toniques.", category: "haut du corps", img: "")
+Exercice.create(title: "Renforcement des triceps", composition: "Curls biceps, Extensions triceps, Pompes", description: "Développez des bras forts avec cet ensemble d'exercices ciblant les biceps et les triceps. Les curls, extensions triceps et pompes vous aident à sculpter des bras toniques.", category: "haut du corps", img: "triceps.png")
 
-Exercice.create(title: "Entraînement pliométrique", composition: "Jump squats, Burpees, Box jumps", description: "Améliorez votre explosivité avec cet entraînement pliométrique. Les jump squats, burpees et box jumps sollicitent les muscles de manière dynamique pour des résultats rapides.", category: "full body", img: "")
+Exercice.create(title: "Renforcement pliométrique", composition: "Jump squats, Burpees, Box jumps", description: "Améliorez votre explosivité avec cet entraînement pliométrique. Les jump squats, burpees et box jumps sollicitent les muscles de manière dynamique pour des résultats rapides.", category: "full body", img: "burpees.png")
 
-Exercice.create(title: "Entraînement du haut du corps", composition: "Developpé couché, Pull-ups, Dips", description: "Sculptez votre haut du corps avec cet ensemble d'exercices, incluant le développé couché, les pull-ups et les dips. Renforcez vos muscles du torse, du dos et des épaules.", category: "haut du corps", img: "")
+Exercice.create(title: "Renforcement du haut du corps", composition: "Developpé couché, Pull-ups, Dips", description: "Sculptez votre haut du corps avec cet ensemble d'exercices, incluant le développé couché, les pull-ups et les dips. Renforcez vos muscles du torse, du dos et des épaules.", category: "haut du corps", img: "")
 
 Exercice.create(title: "Entraînement de stabilité", composition: "Swiss ball squats, Plank, Russian twists", description: "Améliorez votre stabilité corporelle avec cet ensemble d'exercices. Les swiss ball squats, plank et russian twists renforcent les muscles profonds pour une meilleure posture.", category: "full body", img: "")
 
