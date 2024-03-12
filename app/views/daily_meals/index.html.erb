@@ -11,7 +11,7 @@
   </div>
   <div class="container-daily-meal">
       <h2>Repas de la journée</h2>
-      <div class="meal_card">
+      <div class="meal-card">
           <% @daily_meal.meals.each do |meal| %>
             <div class="meal row">
               <%= link_to meal_path(meal) do %>
