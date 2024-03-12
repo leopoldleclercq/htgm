@@ -2,35 +2,27 @@
   height: 100vh;
   background-color: #1D3D57;
 }
-
-.nav-bar-meal {
-  background-color: #EBE7D6;
-  position: fixed;
-  width: 100%;
-  padding: 20px;
-}
-
 .meal-container {
   padding: 20px;
 }
-
-.img-meal {
+.contenu-meal {
   padding-top: 100px;
   padding-bottom: 20px;
   border-bottom: 2px solid #EBE7D6;
 }
-
+.img-meal {
+  border-radius: 10px;
+  width: 400px;
+}
 h2, h3 {
   font-weight: bold;
   color: #EBE7D6;
 }
-
 .informations {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .meal-calories {
   text-align: center;
   background-color: #FF6E41;
@@ -44,7 +36,6 @@ h2, h3 {
     width: 30px;
   }
 }
-
 .composition, .description {
   padding-top: 40px;
   h3 {
