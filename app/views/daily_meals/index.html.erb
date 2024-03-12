@@ -1,16 +1,15 @@
-<div class="daily-meal">
+<div class="daily-meal-page">
   <div class="nav-bar-daily-meal">
     <div class="arrow-back">
       <%= link_to dashboards_path do %>
-        <%# utiliser font anwsome pour la fleche retour %>
-        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
       <% end %>
     </div>
     <div class="food">
       <i class="fa-solid fa-utensils fa-2xl"></i>
     </div>
   </div>
-  <div class="container-meal">
+  <div class="container-daily-meal">
       <h2>Repas de la journée</h2>
       <div class="meal-card">
           <% @daily_meal.meals.each do |meal| %>

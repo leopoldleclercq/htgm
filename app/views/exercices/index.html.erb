@@ -1,27 +1,25 @@
 <div class="exercices-page">
-  <div class="navbar-exercice">
-    <div class="back">
+  <div class="nav-bar-exercices">
+    <div class="arrow-back">
       <%= link_to dashboards_path do %>
-        <%# utiliser font anwsome pour la fleche retour %>
-        <p>retour</p>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
       <% end %>
     </div>
-    <div class="logo-exercices">
-      <%# trouver un logo pour les exercices %>
-      <p>logo exercice</p>
+    <div class="icon-exercices">
+      <i class="fa-solid fa-dumbbell fa-2xl"></i>
     </div>
   </div>
   <div class="category">
     <%# crée une seconde navbar pour les 3 categories %>
   </div>
-  <div class="exercices_list">
-    <ul>
+  <div class="exercices-list">
+    <ul class="list-exe">
       <% @exercices.each do |exercice| %>
         <div class="exercice-card">
-          <%= link_to exercice_path(exercice) do %>
+          <%= link_to exercice_path(exercice), class:"exercice-link" do %>
           <li>
             <div class="exercice-title">
-              <p><%= exercice.title %></p>
+              <h4><%= exercice.title %></h4>
             </div>
             <div class="exercice-img">
               <p><%= exercice.img %></p>

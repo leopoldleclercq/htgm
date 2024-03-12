@@ -1,15 +1,22 @@
-<div class="exercice-page">
-  <div class="img-exercice">
-    <%# insérer l'image en background %>
-    <div class="back">
-      <%# utiliser font anwsome pour la fleche retour %>
-      <%= link_to exercices_path do %>
-        <p>retour</p>
+<div class="exercice-page custom-background">
+  <div class="nav-bar-exercices">
+    <div class="arrow-back">
+      <%= link_to dashboards_path do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
       <% end %>
     </div>
+    <div class="icon-exercices">
+      <i class="fa-solid fa-dumbbell fa-2xl"></i>
+    </div>
   </div>
-  <div class="exercice-text">
-    <p><%= @exercice.title %></p>
-    <p><%= @exercice.description %></p>
+
+  <div class="exercice">
+    <div class="img-exercice">
+      </div>
+    </div>
+    <div class="exercice-text">
+      <p><%= @exercice.title %></p>
+      <p><%= @exercice.description %></p>
+    </div>
   </div>
 </div>
