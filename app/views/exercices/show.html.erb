@@ -9,13 +9,13 @@
       <i class="fa-solid fa-dumbbell fa-2xl"></i>
     </div>
   </div>
-
   <div class="exercice">
     <div class="img-exercice">
       </div>
     </div>
     <div class="exercice-text">
       <div class="exercice-title">
+        <p><%= image_tag @exercice.img, width: "150", height: "150" %></p>
         <h4><%= @exercice.title %></h4>
         <h5><strong><%= @exercice.category %></strong></h5>
       <p><%= @exercice.description %></p>
