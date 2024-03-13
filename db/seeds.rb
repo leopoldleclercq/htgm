@@ -14,13 +14,14 @@ Exercice.destroy_all
 User.destroy_all
 DailyMeal.destroy_all
 DailyMealMeal.destroy_all
+Food.destroy_all
 
 meal1 = Meal.create(
   img: "https://www.unlockfood.ca/EatRightOntario/media/Website-images-resized/Recipe%20Images%20-resized/Vegetable-Quinoa-Salad-resized.jpg",
   title: "Salade de quinoa aux légumes frais",
   composition: "100g de quinoa cuit, 1 concombre, 1 poivron rouge, 1 tomate, 50g de feta, 1 cuillère à soupe d'huile d'olive, sel et poivre.",
   description: "Une salade légère et délicieuse, parfaite pour une alimentation saine. Le quinoa apporte une source de protéines, tandis que les légumes frais ajoutent des vitamines et des fibres. La feta offre une touche de saveur, le tout assaisonné d'une vinaigrette légère à l'huile d'olive.",
-  calorie: 350
+  calorie: 500
 )
 
 meal2 = Meal.create(
@@ -28,7 +29,7 @@ meal2 = Meal.create(
   title: "Poulet grillé aux herbes et quinoa",
   composition: "150g de poitrine de poulet, 1 tasse de quinoa cuit, mélange d'herbes (thym, romarin, persil), jus de citron, sel et poivre.",
   description: "Un plat protéiné et nutritif qui saura satisfaire vos papilles. Le poulet grillé est assaisonné d'un mélange d'herbes parfumées, accompagné de quinoa riche en fibres. Une option délicieuse pour une alimentation équilibrée.",
-  calorie: 400
+  calorie: 500
 )
 
 meal3 = Meal.create(
@@ -36,7 +37,7 @@ meal3 = Meal.create(
   title: "Wrap végétarien aux haricots noirs",
   composition: "Tortilla de blé entier, 1 tasse de haricots noirs cuits, guacamole, laitue, tomates, oignons rouges, sauce au yaourt, sel et poivre.",
   description: "Un wrap végétarien savoureux et nourrissant. Les haricots noirs offrent une excellente source de protéines végétales, tandis que les légumes frais ajoutent des vitamines et des minéraux. La sauce au yaourt ajoute une touche de crémeux sans compromettre la santé.",
-  calorie: 300
+  calorie: 700
 )
 
 meal4 = Meal.create(
@@ -340,3 +341,11 @@ daily_meal1 = DailyMeal.create!(user: user1, date_of_meals: Date.today, calorie_
 daily_meal_meals1 = DailyMealMeal.create!(meal: meal3, daily_meal: daily_meal1)
 daily_meal_meals2 = DailyMealMeal.create!(meal: meal1, daily_meal: daily_meal1)
 daily_meal_meals3 = DailyMealMeal.create!(meal: meal2, daily_meal: daily_meal1)
+
+Food.create(title: "Pomme", calories: 52)
+Food.create(title: "Banane", calories: 89)
+Food.create(title: "Orange", calories: 47)
+Food.create(title: "Raisin", calories: 69)
+Food.create(title: "Fraise", calories: 32)
+
+puts "5 fruits ont été ajoutés à la base de données."

@@ -8,11 +8,18 @@
       </button>
     </div>
 
-
-    <button type="button" class="btn btn-clear">
-      <i class="bi bi-search icon-dark-blue"></i>
-      <i class="fa-solid fa-magnifying-glass fa-3x icon-dark-blue"></i>
-    </button>
+    <div class="row justify-content-center">
+      <div class="col-sm-8 my-3">
+        <%= form_with url: foods_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Taper un aliment"
+            %>
+          <%= submit_tag "Rechercher", name: "", class: "btn-search"%>
+        <% end %>
+      </div>
+    </div>
   </div>
 
   <div class="row justify-content-center align-items-center" style="height: 70vh;">
@@ -33,7 +40,7 @@
   </div>
 
 
-  <div class="nav-bar">
+  <div class="nav-bar-dashboard">
     <%= link_to exercices_path, class: "nav-item" do %>
       <i class="bi bi-person"><i class="fa-solid fa-dumbbell fa-2xl"></i></i>
     <% end %>
@@ -43,5 +50,23 @@
     <%= link_to daily_meals_path, class: "nav-item" do %>
       <i class="bi bi-person"><i class="fa-solid fa-utensils fa-2xl"></i></i>
     <% end %>
+  </div>
+  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="searchModalLabel">Rechercher des aliments</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= form_with url: foods_path, method: :get, class: "form-inline" do %>
+            <%= text_field_tag :query, nil, placeholder: "Rechercher des aliments", class: "form-control mr-2" %>
+            <%= submit_tag "Rechercher", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
