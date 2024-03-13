@@ -9,10 +9,14 @@
       <i class="fa-solid fa-dumbbell fa-2xl"></i>
     </div>
   </div>
-  <div class="category">
-    <%# crée une seconde navbar pour les 3 categories %>
-  </div>
+
   <div class="exercices-list">
+    <div class="category">
+      <%= form_tag(exercices_path, method: :get) do %>
+        <%= select_tag "exercice", options_from_collection_for_select(Exercice::CATEGORIES, :to_s, :to_s, params["exercice"]), class:"form-category" %>
+        <%= submit_tag "go", class:"form-category-go"  %>
+      <% end %>
+    </div>
     <ul class="list-exe">
       <% @exercices.each do |exercice| %>
         <div class="exercice-card">

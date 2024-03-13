@@ -18,7 +18,7 @@ i {
 
 .exercices-list {
   background-color: #1D3D57;
-  padding-top: 90px;
+  padding-top: 85px;
   list-style-type: none;
 }
 
@@ -43,6 +43,43 @@ i {
     padding-bottom: 10px;
     border-bottom: 2px solid #EBE7D6;
     border-radius: 20%;
+  }
+}
+
+.category {
+  padding: 20px;
+  border-bottom: 2px solid white;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+
+  .form-category {
+    width: 100px;
+    height: 50px;
+    background-color: #EBE7D6;
+    border-radius: 10px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #1D3D57;
+    font-size: large;
+    font-weight: bold;
+    // margin-right: 20px;
+  }
+
+  .form-category-go {
+    width: 40px;
+    height: 40px;
+    background-color: #FF6E41;
+    border-radius: 10px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #1D3D57;
+    font-size: large;
+    font-weight: bold;
+    // margin-right: 20px;
   }
 }
 
