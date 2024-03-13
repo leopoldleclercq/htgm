@@ -1,5 +1,6 @@
-body {
+.dashboard-page {
   background-color: #EBE7D6;
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
@@ -11,12 +12,12 @@ body {
 }
 
 /* Barre de progression ajustée */
-.progress {
-  background-color: #e0e0e0;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 2px solid black;
-}
+// .progress {
+//   background-color: #e0e0e0;
+//   border-radius: 20px;
+//   overflow: hidden;
+//   border: 2px solid black;
+// }
 
 .progress-bar {
   background: linear-gradient(to right, #ff0000, #008000);
@@ -24,7 +25,7 @@ body {
 }
 
 /* Icônes de navigation en bas de la page */
-.nav-bar {
+.nav-bar-dashboard {
   position: fixed; /* Ajoutez cette propriété pour fixer la barre de navigation */
   left: 0; /* Alignez à gauche */
   bottom: 0; /* Alignez en bas */
@@ -53,8 +54,11 @@ body {
 .icon-dark-blue {
   color: #1D3D57; /* Bleu foncé */
 }
-.dashboard-page {
-  height: 100vh;
+
+.btn-search {
+  background-color: #1D3D57;
+  color: #fefefe;
+  border-radius: 10px;
 }
 
 .container-d {
@@ -65,4 +69,25 @@ body {
 
 .calendar {
   padding-left: 10px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
 }

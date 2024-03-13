@@ -14,6 +14,7 @@ Exercice.destroy_all
 User.destroy_all
 DailyMeal.destroy_all
 DailyMealMeal.destroy_all
+Food.destroy_all
 
 meal1 = Meal.create(
   img: "https://www.unlockfood.ca/EatRightOntario/media/Website-images-resized/Recipe%20Images%20-resized/Vegetable-Quinoa-Salad-resized.jpg",
@@ -340,3 +341,11 @@ daily_meal1 = DailyMeal.create!(user: user1, date_of_meals: Date.today, calorie_
 daily_meal_meals1 = DailyMealMeal.create!(meal: meal3, daily_meal: daily_meal1)
 daily_meal_meals2 = DailyMealMeal.create!(meal: meal1, daily_meal: daily_meal1)
 daily_meal_meals3 = DailyMealMeal.create!(meal: meal2, daily_meal: daily_meal1)
+
+Food.create(title: "Pomme", calories: 52)
+Food.create(title: "Banane", calories: 89)
+Food.create(title: "Orange", calories: 47)
+Food.create(title: "Raisin", calories: 69)
+Food.create(title: "Fraise", calories: 32)
+
+puts "5 fruits ont été ajoutés à la base de données."
