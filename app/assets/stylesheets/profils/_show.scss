@@ -1,0 +1,40 @@
+.profil-page {
+  background-color: #1D3D57;
+  height: 100vh;
+}
+
+.nav-bar-profil {
+  background-color: #EBE7D6;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+
+  .icon-profil {
+    color: #1D3D57;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}
+
+.profil-content {
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  h2 {
+    padding-bottom: 60px;
+  }
+
+  p {
+    padding: 20px;
+  }
+
+  .user-data {
+    background-color: #EBE7D6;
+    border-radius: 10px;
+    color: #1D3D57;
+    display: flex;
+    justify-content: center;
+  }
+}
