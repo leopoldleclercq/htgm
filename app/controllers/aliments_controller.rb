@@ -1,4 +1,4 @@
-class AlimentController < ApplicationController
+class AlimentsController < ApplicationController
     def index
       if params[:query].present?
         @aliments = Aliment.where("name ILIKE ?", "%#{params[:query]}%")
