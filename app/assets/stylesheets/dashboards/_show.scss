@@ -1,55 +1,83 @@
 .dashboard-page {
   background-color: #EBE7D6;
   height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
+  position: fixed;
 }
 
-.btn-clear {
-  background-color: transparent; /* Enlève le fond bleu */
-  border: none;
+.container-d {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+
+  .btn-calendar {
+    color: #1D3D57;
+  }
+
+  .search-bar {
+
+    .btn-search {
+      border: none;
+      font-weight: bold;
+    }
+  }
 }
 
-/* Barre de progression ajustée */
-// .progress {
-//   background-color: #e0e0e0;
-//   border-radius: 20px;
-//   overflow: hidden;
-//   border: 2px solid black;
-// }
+.content-dashboard {
+  padding-top: 0;
 
+  .progress-bar {
+    font-size: x-large;
+  }
+  .btn-training {
+    border: none;
+    background-color: #FF6E41;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #1D3D57;
+  }
+}
 .progress-bar {
-  background: linear-gradient(to right, #ff0000, #008000);
+  background: linear-gradient(to right, #ff3636, #00af00);
   border-radius: 20px;
 }
 
-/* Icônes de navigation en bas de la page */
 .nav-bar-dashboard {
-  position: fixed; /* Ajoutez cette propriété pour fixer la barre de navigation */
-  left: 0; /* Alignez à gauche */
-  bottom: 0; /* Alignez en bas */
+  position: fixed;
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #1D3D57; /* Bleu foncé */
+  background-color: #1D3D57;
+  padding: 20px 0 20px 0;
+
+  .nav-item {
+    color: #EBE7D6;
+    text-decoration: none;
+    // font-size: 20px;
+    background-color: #FF6E41;
+    padding: 20px;
+    border-radius: 50px;
+  }
 }
 
-.nav-item {
-  color: #FF6E41; /* Couleur légèrement différente pour ressortir sur le fond bleu foncé */
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 16px; /* Ajuste la taille du texte si nécessaire */
-}
+
 
 /* Boutons et icônes */
-.btn-clear {
-  background-color: transparent; /* Enlève la couleur d'arrière-plan */
-  border: none; /* Enlève la bordure */
-  padding: 0; /* Ajuste le padding si nécessaire */
-  color: #1D3D57; /* Assure que le texte (s'il y en a) est également en bleu foncé */
-}
+// .btn-clear {
+//   background-color: transparent; /* Enlève la couleur d'arrière-plan */
+//   border: none; /* Enlève la bordure */
+//   padding: 0; /* Ajuste le padding si nécessaire */
+//   color: #1D3D57; /* Assure que le texte (s'il y en a) est également en bleu foncé */
+// }
 
 .icon-dark-blue {
   color: #1D3D57; /* Bleu foncé */
@@ -61,33 +89,28 @@
   border-radius: 10px;
 }
 
-.container-d {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
 
-.calendar {
-  padding-left: 10px;
-}
+// .calendar {
+//   padding-left: 10px;
+// }
 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+// .modal {
+//   display: none; /* Hidden by default */
+//   position: fixed; /* Stay in place */
+//   z-index: 1; /* Sit on top */
+//   left: 0;
+//   top: 0;
+//   width: 100%; /* Full width */
+//   height: 100%; /* Full height */
+//   overflow: auto; /* Enable scroll if needed */
+//   background-color: rgb(0,0,0); /* Fallback color */
+//   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+// }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
+// .modal-content {
+//   background-color: #fefefe;
+//   margin: 15% auto; /* 15% from the top and centered */
+//   padding: 20px;
+//   border: 1px solid #888;
+//   width: 80%; /* Could be more or less, depending on screen size */
+// }
