@@ -23,7 +23,7 @@
   <div class="content-dashboard">
     <div data-controller="image-switch" class="col text-center">
 
-      <%= image_tag('unpeumuscle.png', alt: 'bonhomme', class: "img-fluid", data: { image_switch_target: "image" }, style: "max-width: 400px; max-height: 530px;") %>
+      <%= image_tag('unpeumuscle.png', alt: 'bonhomme', class: "img-fluid", data: { image_switch_target: "image" }, style: "max-width: 400px; max-height: 550px;") %>
 
       <div class="progress " style="margin: auto; width: 80%; height: 40px;">
         <div class="progress-bar" role="progressbar" style="width: <%= current_user.calorie_counter %>%;" aria-valuenow="<%= current_user.calorie_counter %>" aria-valuemin="0" aria-valuemax="100"><%= current_user.calorie_counter %> kcal</div>
