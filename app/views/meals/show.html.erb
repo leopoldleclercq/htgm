@@ -23,7 +23,10 @@
     </div>
     <div class="composition">
       <h3>Composition</h3>
-      <p><%= @meal.composition %></p>
+      <% @meal.composition.split("-")[1...-1].each do |tt| %>
+        <p><%="- #{tt}"%></p>
+      <% end %>
+
     </div>
     <div class="description">
       <h3>Description</h3>
