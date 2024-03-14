@@ -12,6 +12,7 @@ Rails.application.routes.draw do
         get 'resume'
       end
   end
+  resources :foods, only: [:index]
   resource :dashboards, only: [:show]
   resources :exercices, only: [:index, :show]
   resources :daily_meals, only: [:index]

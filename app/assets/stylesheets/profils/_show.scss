@@ -3,10 +3,15 @@
   height: 100vh;
 }
 
+tr {
+  padding: 20px 0 20px 0;
+}
+
 .nav-bar-profil {
   background-color: #EBE7D6;
   position: fixed;
   width: 100%;
+  height: 100vh;
   padding: 20px;
 
   .icon-profil {
@@ -23,7 +28,7 @@
   padding-right: 20px;
 
   h2 {
-    padding-bottom: 60px;
+    padding-bottom: 5px;
   }
 
   p {
@@ -37,4 +42,86 @@
     display: flex;
     justify-content: center;
   }
+}
+
+/* Styles de base pour le profil */
+.profil-wrapper {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  height: 100%;
+  padding: 20px;
+}
+
+/* En-tête du profil */
+.profil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #dedede;
+}
+
+.icon-back,
+.icon-profile {
+  font-size: 24px;
+}
+
+/* Contenu du profil */
+.profil-content {
+  padding-top: 20px;
+}
+
+.profil-content h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Disposition des informations du profil */
+.profil-data-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.profil-data-column {
+  flex-basis: 50%;
+}
+
+/* Style pour les données de l'utilisateur */
+.user-data {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Style pour les labels des données */
+.data-label {
+  font-weight: normal;
+  color: #666;
+}
+
+/* Modifier les dimensions en fonction de la largeur de l'écran */
+@media (max-width: 768px) {
+  .profil-data-row {
+    flex-direction: column;
+  }
+
+  .profil-data-column {
+    flex-basis: 100%;
+  }
+}
+
+.data-label, .user-data {
+  margin: 10px;
+}
+
+.tableau {
+  width: 370px;
+  height: 300px;
+  border-radius: 10%;
+}
+
+.coucou {
+  display: flex;
+  justify-content: space-around
 }

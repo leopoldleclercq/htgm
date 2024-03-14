@@ -1,4 +1,4 @@
-<div class="container sessions">
+<div class="container sessions-f">
 
   <div class="row logo-home">
     <%= image_tag('logo1.png', alt: 'Logo de l\'application') %>
@@ -11,17 +11,18 @@
       <%= f.input :sexe, label: "Sexe", label_html: { class: "form-label" } do %>
       <%= f.select :sexe, ['Male', 'Female'], { prompt: 'choisissez votre sexe' }, { class: 'form-control' } %>
       <% end %>
-      <%= f.input :size, label: "Taille", label_html: { class: "form-label" } %>
+      <%= f.input :size, label: "Taille en (m)", label_html: { class: "form-label" } %>
       <%= f.input :goal, label: "Objectif", label_html: { class: "form-label" } do %>
       <%= f.select :goal, ['Prise de muscle sans prise de gras', 'Perte de gras sans perte de muscle'], { prompt: 'Choisissez votre objectif' }, { class: 'form-control' } %>
       <% end %>
-      <%= f.input :year, label: "Année de naissance", label_html: { class: "form-label" } %>
-      <%= f.input :training, label: "Entraînement", label_html: { class: "form-label" } do %>
+      <%= f.input :year, label: "Âge", label_html: { class: "form-label" } %>
+      <%= f.input :training, label: "Entraînement(s) (par semaine)", label_html: { class: "form-label" } do %>
       <%= f.select :training, [0, 1, 2, 3, 4, 5, 6, 7], { prompt: 'Choisissez votre niveau d\'entraînement' }, { class: 'form-control' } %>
       <% end %>
-      <%= f.input :body_fat, label: "Masse grasse", label_html: { class: "form-label" } %>
       <%= f.input :weight, label: "Poids", label_html: { class: "form-label" } %>
-      <%= f.submit 'Valider', class: 'btn btn-connection btn-primary' %>
+      <div class="btn-validate-form">
+      <%= f.submit 'Valider', class: 'btn btn-connection' %>
+      </div>
     <% end %>
 
   </div>

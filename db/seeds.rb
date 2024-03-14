@@ -39,7 +39,7 @@ meal2 = Meal.create(
                 - jus de citron
                 - sel et poivre",
   description: "Un plat protéiné et nutritif qui saura satisfaire vos papilles. Le poulet grillé est assaisonné d'un mélange d'herbes parfumées, accompagné de quinoa riche en fibres. Une option délicieuse pour une alimentation équilibrée.",
-  calorie: 500
+  calorie: 1000
 )
 
 meal3 = Meal.create(
@@ -52,7 +52,7 @@ meal3 = Meal.create(
                 - sauce au yaourt
                 - sel et poivre",
   description: "Un wrap végétarien savoureux et nourrissant. Les haricots noirs offrent une excellente source de protéines végétales, tandis que les légumes frais ajoutent des vitamines et des minéraux. La sauce au yaourt ajoute une touche de crémeux sans compromettre la santé.",
-  calorie: 700
+  calorie: 1000
 )
 
 meal4 = Meal.create(
@@ -340,15 +340,16 @@ Exercice.create(title: "Yoga pour la force intérieure", composition: "Postures 
 user1 = User.create!(
   email: 'leo@mail.com',
   password: 'secret',
-  first_name: "Leonardo",
-  last_name: "DiCaprio",
+  first_name: "Léopold",
+  last_name: "Leclercq",
   sexe: "male",
-  size: 1.83,
-  training: 1,
+  size: 1.87,
+  training: 3,
   goal: "muscles",
-  body_fat: 30,
-  weight: 90,
-  calorie_counter: 1780
+  year: 22,
+  body_fat: 14,
+  weight: 80,
+  calorie_counter: 2500
 )
 p today = Date.today
 daily_meal1 = DailyMeal.create!(user: user1, date_of_meals: Date.today, calorie_goal: 1000)

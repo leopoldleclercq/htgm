@@ -2,36 +2,68 @@
 
   <div class="nav-bar-profil">
     <div class="arrow-back">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page de Profil</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Assurez-vous que le chemin d'accès au fichier CSS est correct -->
+</head>
+<body>
+
+<div class="profil-wrapper">
+  <div class="profil-header">
+    <!-- Icône de retour -->
+    <div class="icon-back">
       <%= link_to dashboards_path do %>
         <i class="fa-solid fa-arrow-left fa-lg"></i>
       <% end %>
     </div>
-    <div class="icon-profil">
+    <!-- Icône de profil -->
+    <div class="icon-profile">
       <i class="fa-regular fa-user fa-2xl"></i>
     </div>
   </div>
 
   <div class="profil-content">
     <h2>Mes données :</h2>
-    <div class="row">
-      <div class="col-8">
-        <p>Prénom :</p>
-        <p>Nom :</p>
-        <p>Ma taille :</p>
-        <p>Mon poids :</p>
-        <p>Nombres d'entraînement(s) :</p>
-        <p>Mon objectif :</p>
-        <p>Mon apport caloriques journalier :</p>
-      </div>
-
-      <div class="col-4">
-        <p class="user-data"><%=current_user.last_name %></p>
-        <p class="user-data"><%=current_user.first_name %></p>
-        <p class="user-data"><strong><%=current_user.size %></strong> m</p>
-        <p class="user-data"><strong><%=current_user.weight %></strong> kg</p>
-        <p class="user-data"><strong><%=current_user.training %></strong> / week</p>
-        <p class="user-data"><%=current_user.goal %></p>
-        <p class="user-data"><strong><%=current_user.calorie_counter %></strong> cal / jour</p>
-      </div>
+    <table>
+      <tr>
+        <td class="data-label">Prénom :</td>
+        <td class="user-data"><%= current_user.first_name %></td>
+      </tr>
+      <tr>
+        <td class="data-label">Nom :</td>
+        <td class="user-data"><%= current_user.last_name %></td>
+      </tr>
+      <tr>
+        <td class="data-label">Ma taille :</td>
+        <td class="user-data"><strong><%= current_user.size %></strong> m</td>
+      </tr>
+      <tr>
+        <td class="data-label">Mon poids :</td>
+        <td class="user-data"><strong><%= current_user.weight %></strong> kg</td>
+      </tr>
+      <tr>
+        <td class="data-label">Nombres d'entraînement(s) :</td>
+        <td class="user-data"><strong><%= current_user.training %></strong> / semaine</td>
+      </tr>
+      <tr>
+        <td class="data-label">Mon objectif :</td>
+        <td class="user-data"><%= current_user.goal %></td>
+      </tr>
+      <tr>
+        <td class="data-label">Mon apport calorique journalier :</td>
+        <td class="user-data"><strong><%= current_user.calorie_counter %></strong> kcal / jour</td>
+      </tr>
+    </table>
+    <div class="coucou">
+      <%= image_tag('tableau.jpg', class:"tableau", alt: 'tableau') %>
     </div>
+  </div>
+  <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
 </div>
+
+</body>
+</html>
