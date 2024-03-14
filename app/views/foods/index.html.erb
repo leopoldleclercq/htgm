@@ -1,24 +1,30 @@
-<%# <div>
-  <%= form_with url: foods_path, method: :get do |f| %>
-<%#    <%= f.text_field_tag :query, params[:query], placeholder: "Rechercher des foods" %>
- <%#   <%= f.submit_tag "Rechercher" %>
- <%# <% end %>
-<%#</div> %>
-
-<div class="container">
-  <div class="row justify-content-center">
-    
-    <div class="col-sm-8">
-      <div id="foods">
-        <% if @foods.any? %>
-          <% @foods.each do |food| %>
-            <h4><%= food.title %></h4>
-            <p><%= food.calories %></p>
-          <% end %>
-        <% else %>
-          <em>Sorry, no foods found.</em>
-        <% end %>
-      </div>
+<div class="food-page">
+  <div class="nav-bar-daily-meal">
+    <div class="arrow-back">
+      <%= link_to dashboards_path do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
+      <% end %>
+    </div>
+    <div class="food">
+      <i class="fa-solid fa-utensils fa-2xl"></i>
     </div>
   </div>
+  <%= link_to dashboards_path, class:"link-decoration" do%>
+    <div class="food-content">
+          <% if @foods.any? %>
+            <% @foods.each do |food| %>
+      <div class="food-card">
+            <div>
+              <h4 class="food-title"><%= food.title %></h4>
+            </div>
+            <div class="background-food-calories">
+              <p class="food-calories"><strong><%= food.calories %></strong> cal</p>
+            </div>
+            <% end %>
+      </div>
+          <% else %>
+            <em>Sorry, no foods found.</em>
+          <% end %>
+    </div>
+  <% end %>
 </div>
