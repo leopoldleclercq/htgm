@@ -35,15 +35,21 @@
 
 
   <div class="nav-bar-dashboard">
-    <%= link_to exercices_path, class: "nav-item" do %>
-      <i class="bi bi-person"><i class="fa-solid fa-dumbbell fa-2xl"></i></i>
-    <% end %>
-    <%= link_to profils_path, class: "nav-item" do %>
-      <i class="bi bi-person"><i class="fa-solid fa-user fa-2xl"></i></i>
-    <% end %>
-    <%= link_to daily_meals_path, class: "nav-item" do %>
-      <i class="bi bi-person"><i class="fa-solid fa-utensils fa-2xl"></i></i>
-    <% end %>
+    <div class="icon-style">
+      <%= link_to exercices_path, class: "nav-item" do %>
+        <i class="fa-solid fa-dumbbell fa-2xl"></i></i>
+      <% end %>
+    </div>
+    <div class="icon-style">
+      <%= link_to profils_path, class: "nav-item" do %>
+        <i class="fa-solid fa-user fa-2xl"></i></i>
+      <% end %>
+    </div>
+    <div class="icon-style">
+      <%= link_to daily_meals_path, class: "nav-item" do %>
+        <i class="fa-solid fa-utensils fa-2xl"></i></i>
+      <% end %>
+    </div>
   </div>
 
 </div>
