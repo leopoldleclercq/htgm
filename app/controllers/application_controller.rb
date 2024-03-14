@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
     stored_location_for(user) || edit_onboardings_path
   end
 
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+
 end
