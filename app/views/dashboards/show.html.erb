@@ -1,41 +1,35 @@
 <div class="dashboard-page">
   <div class="container-d">
-    <div class="row mt-3 justify-content-between">
-      <!-- Bouton Calendrier sans couleur d'arrière-plan et icône bleu foncé -->
-      <button type="button" class="calendar btn btn-clear">
-        <i class="bi bi-calendar icon-dark-blue"></i>
+    <div class="btn-calendar">
+
         <i class="fa-solid fa-calendar-days fa-3x icon-dark-blue"></i>
-      </button>
+
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-sm-8 my-3">
-        <%= form_with url: foods_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Taper un aliment"
-            %>
-          <%= submit_tag "Rechercher", name: "", class: "btn-search"%>
-        <% end %>
-      </div>
+    <div class="search-bar">
+
+      <%= form_with url: foods_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Taper un aliment"
+          %>
+        <%= submit_tag "Rechercher", name: "", class: "btn-search"%>
+      <% end %>
+
     </div>
   </div>
 
-  <div class="row justify-content-center align-items-center" style="height: 70vh;">
+  <div class="content-dashboard">
     <div data-controller="image-switch" class="col text-center">
 
       <%= image_tag('unpeumuscle.png', alt: 'bonhomme', class: "img-fluid", data: { image_switch_target: "image" }, style: "max-width: 400px; max-height: 600px;") %>
 
-      <div class="progress mt-3" style="margin: auto; width: 80%; height: 40px;">
-
+      <div class="progress " style="margin: auto; width: 80%; height: 40px;">
         <div class="progress-bar" role="progressbar" style="width: <%= current_user.calorie_counter %>%;" aria-valuenow="<%= current_user.calorie_counter %>" aria-valuemin="0" aria-valuemax="100"><%= current_user.calorie_counter %> kcal</div>
       </div>
 
-      <p class="mt-2">Calories: <%= current_user.calorie_counter %> kcal</p>
-
-
-      <button type="button" class="btn mt-5" style="background-color: #FF6E41;" data-action="click->image-switch#switch">Entraînement fait</button>
+      <button type="button" class="btn-training" style="background-color: #FF6E41;" data-action="click->image-switch#switch">Entraînement fait</button>
     </div>
   </div>
 
@@ -51,22 +45,5 @@
       <i class="bi bi-person"><i class="fa-solid fa-utensils fa-2xl"></i></i>
     <% end %>
   </div>
-  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="searchModalLabel">Rechercher des aliments</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <%= form_with url: foods_path, method: :get, class: "form-inline" do %>
-            <%= text_field_tag :query, nil, placeholder: "Rechercher des aliments", class: "form-control mr-2" %>
-            <%= submit_tag "Rechercher", class: "btn btn-primary" %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </div>
