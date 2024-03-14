@@ -11,9 +11,10 @@
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
-i {
-  color: #1D3D57;
-}
+
+  i {
+    color: #1D3D57;
+  }
 }
 
 .exercices-list {
@@ -37,6 +38,7 @@ i {
   padding-right: 20px;
   padding-bottom: 20px;
   text-align: center;
+  
   li {
     padding-top: 20px;
     padding-left: 20px;
@@ -56,7 +58,7 @@ i {
 
   .form-category {
     width: 100px;
-    height: 50px;
+    height: 30px;
     background-color: #EBE7D6;
     border-radius: 10px;
     border: none;
@@ -65,12 +67,11 @@ i {
     color: #1D3D57;
     font-size: large;
     font-weight: bold;
-    // margin-right: 20px;
   }
 
   .form-category-go {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 30px;
     background-color: #FF6E41;
     border-radius: 10px;
     border: none;
@@ -79,7 +80,6 @@ i {
     color: #1D3D57;
     font-size: large;
     font-weight: bold;
-    // margin-right: 20px;
   }
 }
 

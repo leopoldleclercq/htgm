@@ -1,36 +1,49 @@
-.nav-bar-exercices {
-  background-color: #EBE7D6;
-  position: fixed;
-  width: 100%;
-  padding: 20px;
-}
-
-.icon-exercices {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-
-i {
-  color: #1D3D57;
-}
-}
-
 .exercice-page {
   height: 100vh;
   background-color: #1D3D57;
 
 }
 
+.nav-bar-exercices {
+  background-color: #EBE7D6;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+
+  .icon-exercices {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+  i {
+    color: #1D3D57;
+  }
+  }
+}
+
 .exercice {
-  padding-top: 90px;
+  padding-top: 105px;
 }
 
 .exercice-text {
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.exercice-title, h4{
   color: #EBE7D6;
   text-align: center;
+
+  h2, h4 {
+    padding: 10px 0 20px 0;
+  }
+
+  .ex-img {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #EBE7D6;
+  }
+
+  .img-exercice {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 }
